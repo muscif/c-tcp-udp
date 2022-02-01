@@ -85,11 +85,11 @@ int main(int argc, char *argv[]) {
 	memset(&cad, 0, sizeof(cad));
 
 	sad.sin_family = AF_INET;
-	sad.sin_addr.S_un.S_addr = inet_addr("127.0.0.1");
+	sad.sin_addr.s_addr = inet_addr("127.0.0.1");
 	sad.sin_port = htons(PORT);
 
 	cad.sin_family = AF_INET;
-	cad.sin_addr.S_un.S_addr = inet_addr("127.0.0.1");
+	cad.sin_addr.s_addr = inet_addr("127.0.0.1");
 	cad.sin_port = htons(PORT);
 
 	if (bind(s_socket, (struct sockaddr*) &sad, sizeof(sad)) < 0) {
