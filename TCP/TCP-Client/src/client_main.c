@@ -48,7 +48,7 @@ int main(void) {
 	memset(&sad, 0, sizeof(sad));
 
 	sad.sin_family = AF_INET;
-	sad.sin_addr.S_un.S_addr = inet_addr("127.0.0.1");
+	sad.sin_addr.s_addr = inet_addr("127.0.0.1");
 	sad.sin_port = htons(PORT);
 
 	if (connect(c_socket, (struct sockaddr*) &sad, sizeof(sad)) < 0) {
